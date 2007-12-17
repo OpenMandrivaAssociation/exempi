@@ -15,7 +15,6 @@ License:	BSD
 URL:		http://libopenraw.freedesktop.org/wiki/Exempi
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz
 Source1:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz.asc
-BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	expat-devel
 BuildRequires:	boost-devel
 
