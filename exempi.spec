@@ -1,5 +1,5 @@
 %define name	exempi
-%define version	1.99.4
+%define version	1.99.8
 %define release	%mkrel 1
 
 %define major		2
@@ -11,7 +11,7 @@ Summary:	XMP implementation
 Version:	%{version}
 Release:	%{release}
 Group:		System/Libraries
-License:	BSD
+License:	BSD-like
 URL:		http://libopenraw.freedesktop.org/wiki/Exempi
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz
 Source1:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz.asc
@@ -68,4 +68,3 @@ rm -rf %{buildroot}
 %{_libdir}/*.*a
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
-
