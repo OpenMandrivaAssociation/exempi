@@ -2,7 +2,7 @@
 %define version	1.99.8
 %define release	%mkrel 1
 
-%define major		2
+%define major		3
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
 
