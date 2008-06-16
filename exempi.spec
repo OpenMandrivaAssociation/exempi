@@ -1,6 +1,6 @@
 %define name	exempi
 %define version	1.99.8
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 %define major		3
 %define libname		%mklibname %{name} %{major}
