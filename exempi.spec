@@ -1,5 +1,5 @@
 %define name	exempi
-%define version	1.99.8
+%define version	2.1.0
 %define release	%mkrel 2
 
 %define major		3
