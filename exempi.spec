@@ -15,6 +15,7 @@ License:	BSD-like
 URL:		http://libopenraw.freedesktop.org/wiki/Exempi
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz
 Source1:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz.asc
+Patch0:		exempi-2.1.0-gcc44.patch
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	expat-devel
 BuildRequires:	boost-devel
@@ -46,6 +47,7 @@ be easier to maintain ABI stability.
 
 %prep
 %setup -q
+%patch0 -p1 -b .gcc44
 
 %build
 %configure2_5x
