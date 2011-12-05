@@ -1,22 +1,16 @@
-%define name	exempi
-%define version	2.1.1
-%define release	%mkrel 4
-
 %define major		3
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
 
-Name:		%{name}
+Name:		exempi
 Summary:	XMP implementation
-Version:	%{version}
-Release:	%{release}
+Version:	2.1.1
+Release:	5
 Group:		System/Libraries
 License:	BSD-like
 URL:		http://libopenraw.freedesktop.org/wiki/Exempi
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz
 Source1:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz.asc
-#Patch0:		exempi-2.1.0-gcc44.patch
-BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	expat-devel
 BuildRequires:	boost-devel
 
@@ -47,26 +41,22 @@ be easier to maintain ABI stability.
 
 %prep
 %setup -q
-#%patch0 -p1 -b .gcc44
 
 %build
-%configure2_5x
+%configure2_5x \
+	--disable-static
+
 %make
 
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-
-%clean
-rm -rf %{buildroot}
+find %{buildroot} -name *.la | xargs rm
 
 %files -n %{libname}
-%defattr(-,root,root)
 %{_libdir}/*.so.%{major}*
 
 %files -n %{develname}
-%defattr(-,root,root)
 %{_includedir}/%{name}-2.0
-%{_libdir}/*.*a
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
