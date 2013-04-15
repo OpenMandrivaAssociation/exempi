@@ -1,18 +1,19 @@
-%define major		3
-%define libname		%mklibname %{name} %{major}
-%define develname	%mklibname %{name} -d
+%define major	3
+%define libname	%mklibname %{name} %{major}
+%define devname	%mklibname %{name} -d
 
-Name:		exempi
 Summary:	XMP implementation
+Name:		exempi
 Version:	2.1.1
-Release:	5
+Release:	7
 Group:		System/Libraries
 License:	BSD-like
-URL:		http://libopenraw.freedesktop.org/wiki/Exempi
+Url:		http://libopenraw.freedesktop.org/wiki/Exempi
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz
 Source1:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz.asc
-BuildRequires:	expat-devel
+
 BuildRequires:	boost-devel
+BuildRequires:	pkgconfig(expat)
 
 %description
 Exempi is an implementation of XMP. It is based on Adobe XMP SDK
@@ -28,13 +29,13 @@ Exempi is an implementation of XMP. It is based on Adobe XMP SDK
 4.1.1. The API is C based and means to be used from any language and
 be easier to maintain ABI stability.
 
-%package -n %{develname}
+%package -n %{devname}
 Summary:	XMP implementation - development libraries and headers
 Group:		Development/C
 Requires:	%{libname} = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
 
-%description -n %{develname}
+%description -n %{devname}
 Exempi is an implementation of XMP. It is based on Adobe XMP SDK
 4.1.1. The API is C based and means to be used from any language and
 be easier to maintain ABI stability.
@@ -49,14 +50,12 @@ be easier to maintain ABI stability.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
-find %{buildroot} -name *.la | xargs rm
 
 %files -n %{libname}
-%{_libdir}/*.so.%{major}*
+%{_libdir}/libexempi.so.%{major}*
 
-%files -n %{develname}
+%files -n %{devname}
 %{_includedir}/%{name}-2.0
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
