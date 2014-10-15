@@ -1,2 +1,5 @@
+removed_sources:
+  exempi-2.1.1.tar.gz: f05a4c1d609c0e3cafdf839c16ec46afae1b160d
 sources:
-  "exempi-2.1.1.tar.gz": f05a4c1d609c0e3cafdf839c16ec46afae1b160d
+  exempi-2.2.2.tar.bz2: c0a0014e18f05aa7fac210c84788ef073718a9d8
+  exempi-2.2.2.tar.bz2.asc: 275618291b9271df0d82868fec4e6d6fad3329d1

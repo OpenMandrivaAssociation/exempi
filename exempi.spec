@@ -4,13 +4,13 @@
 
 Summary:	XMP implementation
 Name:		exempi
-Version:	2.1.1
-Release:	13
+Version:	2.2.2
+Release:	1
 Group:		System/Libraries
 License:	BSD-like
 Url:		http://libopenraw.freedesktop.org/wiki/Exempi
-Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz
-Source1:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.gz.asc
+Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.bz2
+Source1:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.bz2.asc
 
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(expat)
@@ -44,7 +44,7 @@ be easier to maintain ABI stability.
 %setup -q
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static
 
 %make
@@ -53,7 +53,9 @@ be easier to maintain ABI stability.
 %makeinstall_std
 
 %files -n %{libname}
+%{_bindir}/%{name}
 %{_libdir}/libexempi.so.%{major}*
+%{_mandir}/man?/%{name}.?.*
 
 %files -n %{devname}
 %{_includedir}/%{name}-2.0
