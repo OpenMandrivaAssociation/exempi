@@ -10,7 +10,6 @@ Group:		System/Libraries
 License:	BSD-like
 Url:		http://libopenraw.freedesktop.org/wiki/Exempi
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.bz2
-Source1:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.bz2.asc
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(expat)
 
