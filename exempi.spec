@@ -12,6 +12,7 @@ Url:		http://libopenraw.freedesktop.org/wiki/Exempi
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.bz2
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(expat)
+BuildRequires:	pkgconfig(zlib)
 
 %description
 Exempi is an implementation of XMP. It is based on Adobe XMP SDK
