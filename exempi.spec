@@ -1,11 +1,11 @@
-%define major 3
+%define major 8
 %define libname %mklibname %{name} %{major}
 %define devname %mklibname %{name} -d
 
 Summary:	XMP implementation
 Name:		exempi
-Version:	2.4.5
-Release:	2
+Version:	2.5.0
+Release:	1
 Group:		System/Libraries
 License:	BSD-like
 Url:		http://libopenraw.freedesktop.org/wiki/Exempi
@@ -47,10 +47,10 @@ be easier to maintain ABI stability.
 %configure \
 	--disable-static
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/%{name}
