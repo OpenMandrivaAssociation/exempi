@@ -4,7 +4,7 @@
 
 Summary:	XMP implementation
 Name:		exempi
-Version:	2.6.3
+Version:	2.6.4
 Release:	1
 Group:		System/Libraries
 License:	BSD-like
