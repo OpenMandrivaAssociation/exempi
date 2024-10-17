@@ -8,7 +8,7 @@ Version:	2.6.5
 Release:	1
 Group:		System/Libraries
 License:	BSD-like
-Url:		http://libopenraw.freedesktop.org/wiki/Exempi
+Url:		https://libopenraw.freedesktop.org/wiki/Exempi
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.bz2
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(expat)
