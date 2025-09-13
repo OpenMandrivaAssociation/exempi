@@ -5,7 +5,7 @@
 Summary:	XMP implementation
 Name:		exempi
 Version:	2.6.6
-Release:	1
+Release:	2
 Group:		System/Libraries
 License:	BSD-like
 Url:		https://libopenraw.freedesktop.org/wiki/Exempi
