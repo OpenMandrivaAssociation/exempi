@@ -10,6 +10,11 @@ Group:		System/Libraries
 License:	BSD-like
 Url:		https://libopenraw.freedesktop.org/wiki/Exempi
 Source0:	http://libopenraw.freedesktop.org/download/%{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	boost-devel
 BuildRequires:	pkgconfig(expat)
 BuildRequires:	pkgconfig(zlib)
